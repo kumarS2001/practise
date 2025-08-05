@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards & Recognition</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #77777738;
+      font-family: Arial, sans-serif;
+    }
+
+
+    .awards-section {
+      padding: 40px 40px 40px   40px;
+      background-color: #f8f8f8;
+
+    }
+
+    .awards-header {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      height: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    .section-label .line {
+      width: 40px;
+      height: 1px;
+      background-color: #ccc;
+    }
+
+    .section-label h5 {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #444;
+      margin: 0;
+    }
+
+    .awards-header h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .btn-view-more {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 4px;
+    }
+
+
+
+    .award-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+
+    }
+
+    .award-box h6 {
+      font-weight: 600;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 10px;
+      font-size: 20px;
+
+
+    }
+
+    .award-box h6::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+    }
+
+
+
+    .award-box p {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .award-box .number {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      width: 25px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      font-size: 14px;
+      border-radius: 3px;
+      margin-right: 10px;
+    }
+
+    .award-box i.circle-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid #000;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 14px;
+      color: #000;
+      transition: all 0.3s ease;
+      padding: 8px;
+    }
+
+    .award-box i.circle-arrow:hover {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .blog-section {
+      background-color: white;
+      padding: 40px;
+    }
+
+    .blog-img img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .blog-category {
+      position: absolute;
+      width: 70px;
+      height: 35px;
+      top: 20px;
+      left: 20px;
+      text-align: center;
+      opacity: 1;
+      align-content: center;
+      background: #fff;
+      color: #000;
+      font-size: 13px;
+      font-weight: 600;
+    
+      border-radius: 3px;
+      
+      
+    }
+
+    .blog-info small {
+      color: #555;
+
+    }
+
+    .blog-info p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.4;
+      color: #111;
+      font-weight: 500;
+
+
+    }
+
+    .footer-section {
+      background-color: #000;
+      padding: 40px;
+    }
+
+    .footer-section h6 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .footer-section p,
+    .footer-section li {
+      font-size: 13px;
+      color: #ccc;
+      margin-bottom: 8px;
+    }
+
+    .footer-section form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    .footer-section.form-control {
+      border: none;
+      border-radius: 0;
+      padding: 10px 15px;
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+
+    }
+
+    .footer-section.btn-dark {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #000 !important;
+      color: white !important;
+    }
+
+
+    .footer-section hr {
+      opacity: 1;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+     
+      
+    }
+
+
+
+
+
+
+    @media (max-width: 768px) {
+      .footer-section{
+        padding: 0;
+      }
+      .footer-section hr{
+        width: 90%;
+        margin: auto;
+      }
+      .awards-header h2 {
+        font-size: 24px;
+      }
+
+      .award-box h6 {
+        font-size: 18px;
+      }
+
+      .award-box p {
+        font-size: 13px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .footer-section{
+        padding: 0;
+      }
+      .footer-section form {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-section .form-control,
+      .footer-section .btn-dark {
+        width: 100% !important;
+        border-radius: 6px !important;
+      }
+      .foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+      }
+
+
+
+      .awards-header {
+        padding: 30px 20px;
+      }
+
+      .awards-header h2 {
+        font-size: 22px;
+      }
+
+      .award-box {
+        padding: 15px;
+      }
+
+      .award-box h6 {
+        font-size: 16px;
+        white-space: normal;
+
+      }
+
+      .award-box p {
+        font-size: 13px;
+      }
+
+      .award-box .number {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+        line-height: 22px;
+      }
+
+      .award-box i.circle-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+      }
+
+      .BLOG {
+        flex-direction: column;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class=".container-fluid ">
+    <div class="container awards-section ">
+      <div class="row g-4 align-items-stretch">
+
+        <div class="  col-12  col-md-12 col-lg-12 col-xl-4 sachij">
+          <div class="awards-header ">
+            <div class="section-label">
+              <span class="line"></span>
+              <h5>OUR BEST AWARDS</h5>
+            </div>
+
+            <h2>Awards & Recognition</h2>
+            <a href="#" class="btn btn-dark btn-sm btn-view-more">VIEW MORE <i class="fas fa-arrow-right ms-1"></i></a>
+          </div>
+        </div>
+
+        <div class="  col-12  col-md-6 col-lg-6 col-xl-4">
+          <div class="award-box h-100">
+            <div>
+              <h6><span class="number">1</span> Best Tiles Brand Awards</h6>
+              <p>This award honors an employee whose innovative idea has significantly benefited studiomarmi, showcasing
+                their commitment to excellence.</p>
+            </div>
+            <div>
+              <i class="fas fa-arrow-right circle-arrow"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="  col-12 col-md-6 col-lg-6 col-xl-4">
+          <div class="award-box h-100">
+            <div>
+              <h6><span class="number">2</span> Leadership Awards</h6>
+              <p>The studiomarmi Leadership Award recognizes exceptional leaders who inspire and motivate their teams.
+              </p>
+            </div>
+            <div>
+              <i class="fas fa-arrow-right circle-arrow"></i>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="  col-12  col-md-6 col-lg-6 col-xl-4 offset-xl-4">
+          <div class="award-box h-100">
+            <div>
+              <h6><span class="number">3</span> Trophy Awards</h6>
+              <p>At studiomarmi, we celebrate excellence with trophies awarded to those who inspire and innovate.</p>
+            </div>
+            <div>
+              <i class="fas fa-arrow-right circle-arrow"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class=" col-12 col-md-6 col-lg-6 col-xl-4">
+          <div class="award-box h-100">
+            <div>
+              <h6><span class="number">4</span> Design Excellence Awards</h6>
+              <p>studiomarmi exemplifies design excellence, showcasing innovative trends and technologies that inspire
+                the
+                industry.</p>
+            </div>
+            <div>
+              <i class="fas fa-arrow-right circle-arrow"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container py-5 blog-section">
+      <div class="d-flex justify-content-between align-items-center mb-4 BLOG">
+        <div class="section-label">
+          <span class="line"></span>
+          <h5>BLOG SECTION</h5>
+        </div>
+        <a href="#" class="btn btn-dark btn-sm btn-view-more">VIEW MORE <i class="fas fa-arrow-right ms-1"></i></a>
+      </div>
+
+      <h2 class="fw-bold mb-4">Watch Our Latest Blog</h2>
+
+      <div class="row g-4">
+
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-img position-relative">
+              <img src="frame2.png" class="img-fluid rounded" alt="Stone Blog">
+              <span class="blog-category">Stone</span>
+
+            </div>
+            <div class="blog-info mt-3">
+              <small>July 7,2025 &nbsp&nbsp| &nbsp&nbsp0&nbsp&nbsp Comments</small>
+              <p class="fw-medium mt-3 blog-text ">Granite & Marble Flooring Make<br>Classy Walkways</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-img position-relative">
+              <img src="Rectangle 29.png" class="img-fluid rounded" alt="Tiles Blog">
+              <span class="blog-category">Tiles</span>
+            </div>
+            <div class="blog-info mt-3">
+              <small>July 7,2025 &nbsp&nbsp| &nbsp&nbsp0&nbsp&nbsp Comments</small>
+              <p class="fw-medium mt-3 blog-text">What's Your Style? Defining Kitchen Design Style</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="blog-card">
+            <div class="blog-img position-relative">
+              <img src="frame1.png" class="img-fluid rounded" alt="Marble Blog">
+              <span class="blog-category">Marble</span>
+
+            </div>
+            <div class="blog-info mt-3">
+              <small>July 7,2025 &nbsp&nbsp|&nbsp &nbsp0&nbsp&nbsp Comments</small>
+              <p class="fw-medium mt-3 blog-text">Granite & Marble Flooring Make<br>Classy Walkways</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container footer-section text-white py-5">
+
+
+      <div class="text-center mb-5">
+        <p class="mb-3">Subscribe to our Newsletter</p>
+        <form class=" input-group d-flex justify-content-center">
+          <input type="email" class="form-control w-50 " placeholder="Enter your email address">
+          <button type="submit" class="btn btn-dark">Subscribe</button>
+        </form>
+      </div>
+
+      <hr class="bg-white">
+
+      <div class="row pt-4 ps-5  foot" >
+
+
+        <div class="col-md-3 mb-4  ">
+          <h6>About Us</h6>
+          <p class="small">There are many variations of passages of Lorem the majority suffer</p>
+          <p class="small"><i class="fas fa-phone me-2"></i> +1800-001-858</p>
+        </div>
+
+        <div class="col-md-3 mb-4 ">
+          <h6>Our navigate</h6>
+          <ul class="list-unstyled small">
+            <li>Marble</li>
+            <li>About Us</li>
+            <li>Service</li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h6>Our Products</h6>
+          <ul class="list-unstyled small">
+            <li>Italy</li>
+            <li>Kuwait</li>
+            <li>Brazil</li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-3 mb-4">
+          <h6>Contact Us</h6>
+          <ul class="list-unstyled small">
+            <li>+1800-001-658</li>
+            <li>info@studiomarmi.com</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
